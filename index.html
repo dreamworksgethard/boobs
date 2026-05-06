@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2a0528" />
+    <title>BOOBS — Solana Meme Coin</title>
+    <meta
+      name="description"
+      content="BOOBS — a fun, flirty Solana meme coin. The first deployed BOOBS token on pump.fun (deployed #12)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;600;800&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <div
+      id="age-gate"
+      class="age-gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="age-gate-title"
+      aria-describedby="age-gate-desc"
+      hidden
+    >
+      <div class="age-gate__box">
+        <div class="age-gate__brand">
+          <img class="age-gate__logo" src="./boobs logo.png" alt="" width="72" height="72" />
+          <span class="age-gate__wordmark title__glow title__glow--meme">BOOBS</span>
+        </div>
+
+        <h1 id="age-gate-title" class="age-gate__title">This site contains mature themes</h1>
+
+        <p class="age-gate__eyebrow">Notice to visitors</p>
+
+        <p id="age-gate-desc" class="age-gate__text">
+          <strong>BOOBS</strong> is a meme project with flirty, adult-leaning humor and imagery. By
+          entering, you confirm you are at least <strong>18</strong> (or the age of majority where you
+          live) and that you want to view this kind of content. This is not financial advice — it’s
+          memes on Solana.
+        </p>
+
+        <div class="age-gate__actions">
+          <button type="button" class="age-gate__btn age-gate__btn--enter" id="age-enter">
+            I am 18 or older — Enter
+          </button>
+          <button type="button" class="age-gate__btn age-gate__btn--exit" id="age-exit">
+            I am under 18 — Exit
+          </button>
+        </div>
+
+        <p class="age-gate__fine">
+          If you share a device with minors, please use discretion. Leave this page if that’s not
+          appropriate for your situation.
+        </p>
+        <p class="age-gate__copy">© BOOBS · Meme coin · Solana</p>
+      </div>
+    </div>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html" aria-label="BOOBS home">
+          <img class="brand__logo" src="./boobs logo.png" alt="BOOBS logo" />
+          <span class="brand__text">BOOBS</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a data-nav="home" href="#main">Home</a>
+          <a href="#about">About</a>
+          <a href="#tits">Gallery</a>
+          <a href="#how-to-buy">How to buy</a>
+          <a href="#tokenomics">Tokenomics</a>
+          <a href="#video">Video</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="copy-ca" type="button">
+            Copy CA
+          </button>
+          <a class="btn btn--primary" href="#how-to-buy">Buy BOOBS</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero hero--home">
+        <div class="sparkles sparkles--hero" id="sparkles" aria-hidden="true"></div>
+        <div class="hero-bubbles" aria-hidden="true">
+          <div class="hero-bubble hero-bubble--a">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/01.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-bubble hero-bubble--b">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/02.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-bubble hero-bubble--c">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/03.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-bubble hero-bubble--d">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/04.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-bubble hero-bubble--e">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/06.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-bubble hero-bubble--f">
+            <span class="hero-bubble__shine"></span>
+            <img src="./gallery/07.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="container hero__grid hero__grid--home">
+          <div class="hero__coin" aria-hidden="true">
+            <div class="coin">
+              <img class="coin__img" src="./boobs logo.png" alt="" />
+            </div>
+          </div>
+
+          <div class="hero__content">
+            <div class="pill pill--meme hero__tag">
+              <span class="pill__dot" aria-hidden="true"></span>
+              <span>First BOOBS on pump.fun • deployed #12 • Solana memes</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__word title__glow title__glow--meme">BOOBS</span>
+              <span class="hero__ticker">The meme coin with maximum bounce.</span>
+            </h1>
+
+            <p class="hero__lead lead lead--big">
+              BOOBS is a fun, flirty Solana meme coin. Community-powered, sparkle-approved, and
+              always here for the vibes.
+            </p>
+
+            <div class="cta hero__cta">
+              <a class="btn btn--primary btn--xl hero__btn" href="#how-to-buy">Buy Here</a>
+              <a class="btn btn--secondary btn--xl hero__btn" href="#tokenomics">Chart</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-simple">
+          <header class="page__head">
+            <div class="page__tag">The lore</div>
+            <h2 class="page__title title__glow title__glow--meme">About</h2>
+            <p class="page__lead">
+              A meme coin on Solana with glossy energy and an unserious mission: make the timeline laugh.
+              It’s the <strong>first deployed BOOBS token on pump.fun</strong> — deploy
+              <strong>#12</strong> among the earliest pump.fun launches.
+            </p>
+          </header>
+
+          <div class="about-simple__body">
+            <p>
+              <strong>BOOBS</strong> is a community meme token: funny, a little spicy, and built to be
+              shared. Nothing complicated — just vibes, memes, and people who get the joke.
+            </p>
+            <p>
+              Post edits, hype the chart, and ride the wave with everyone else who’s here for the culture.
+            </p>
+            <ul class="about-simple__list">
+              <li>Memes, raids, and sparkle — keep it playful.</li>
+              <li>Verify the contract before you buy. If it smells off, skip it.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tits" class="section tits-section" aria-labelledby="tits-title">
+        <div class="sparkles sparkles--tits" id="sparkles-tits" aria-hidden="true"></div>
+        <div class="container">
+          <header class="page__head">
+            <div class="page__tag">Adults only</div>
+            <h2 id="tits-title" class="page__title title__glow title__glow--meme">Bounce room</h2>
+            <p class="page__lead">
+              Slow zooms, pink-gold glow, and a little sparkle — tap a tile to open a zoomed view on
+              this page.
+            </p>
+          </header>
+
+          <div class="tits-grid">
+            <button type="button" class="tits-card" data-full="./gallery/01.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/01.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+            <button type="button" class="tits-card" data-full="./gallery/02.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/02.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+            <button type="button" class="tits-card" data-full="./gallery/03.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/03.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+            <button type="button" class="tits-card" data-full="./gallery/04.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/04.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+            <button type="button" class="tits-card" data-full="./gallery/06.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/06.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+            <button type="button" class="tits-card" data-full="./gallery/07.png" aria-label="Open image larger">
+              <span class="tits-card__shine" aria-hidden="true"></span>
+              <span class="tits-card__frame">
+                <img class="tits-card__img" src="./gallery/07.png" alt="" width="600" height="800" loading="lazy" decoding="async" />
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-to-buy" class="section section--alt">
+        <div class="container">
+          <div class="page__head">
+            <div class="page__tag">Tutorial</div>
+            <h2 class="page__title title__glow title__glow--meme">How to buy</h2>
+            <p class="page__lead">
+              If you can click, you can buy. If you can verify the CA, you can buy safely.
+            </p>
+          </div>
+
+          <div class="buy">
+            <ol class="steps steps--big">
+              <li>
+                <div class="step__head">Get a Solana wallet</div>
+                <div class="step__body">
+                  Install <strong>Phantom</strong> (or any Solana wallet) and fund it with <strong>SOL</strong>.
+                </div>
+              </li>
+              <li>
+                <div class="step__head">Open the official BOOBS page</div>
+                <div class="step__body">
+                  Use the official link and confirm the contract matches the CA.
+                </div>
+              </li>
+              <li>
+                <div class="step__head">Swap SOL → BOOBS</div>
+                <div class="step__body">
+                  Choose your amount, confirm, and let the memes commence.
+                </div>
+              </li>
+              <li>
+                <div class="step__head">Track it</div>
+                <div class="step__body">
+                  Bookmark Solscan/Birdeye and watch the chart do questionable things.
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="tokenomics" class="section">
+        <div class="container">
+          <div class="page__head">
+            <div class="page__tag">Numbers</div>
+            <h2 class="page__title title__glow title__glow--meme">Tokenomics</h2>
+            <p class="page__lead">Clean. Simple. Meme-ready.</p>
+          </div>
+
+          <div class="tok tok--page">
+            <div class="tok__table">
+              <div class="row">
+                <div class="k">Name</div>
+                <div class="v"><strong>boobs</strong></div>
+              </div>
+              <div class="row">
+                <div class="k">Ticker</div>
+                <div class="v"><strong>$BOOBS</strong></div>
+              </div>
+              <div class="row">
+                <div class="k">Network</div>
+                <div class="v">Solana</div>
+              </div>
+              <div class="row">
+                <div class="k">Total supply</div>
+                <div class="v" id="supply">1.000.000.000</div>
+              </div>
+              <div class="row">
+                <div class="k">LP burned</div>
+                <div class="v"><strong>100%</strong></div>
+              </div>
+              <div class="row">
+                <div class="k">Taxes</div>
+                <div class="v">0% / 0%</div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel__title heading-like-sub">Copy CA</h3>
+              <div class="ca">
+                <div class="ca__label">Contract address (CA)</div>
+                <div class="ca__row">
+                  <div class="ca__value mono" id="ca-box-2">J9JShWnSRBeFvJyBgpLwTVYDwoGNrEZCG3Lsjw4yh26G</div>
+                  <button class="btn btn--ghost" id="copy-ca-4" type="button">Copy</button>
+                </div>
+                <div class="tiny" id="copy-status-3" role="status" aria-live="polite"></div>
+              </div>
+
+              <ul class="bullets">
+                <li>Verify the <strong>CA</strong> before buying anything.</li>
+                <li>Memes are forever. Financial advice is not.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="section video-section" aria-labelledby="video-title">
+        <div class="video-section__mesh" aria-hidden="true"></div>
+        <div class="video-section__orb video-section__orb--a" aria-hidden="true"></div>
+        <div class="video-section__orb video-section__orb--b" aria-hidden="true"></div>
+        <div class="container video-section__inner">
+          <header class="page__head">
+            <div class="page__tag">Motion</div>
+            <h2 id="video-title" class="page__title title__glow title__glow--meme">The vibe reel</h2>
+            <p class="page__lead">
+              Short clip, full sparkle — turn sound up if your surroundings allow.
+            </p>
+          </header>
+
+          <div class="video-shell">
+            <div class="video-shell__ring" aria-hidden="true"></div>
+            <div class="video-shell__frame">
+              <video
+                class="video-shell__video"
+                controls
+                playsinline
+                preload="metadata"
+              >
+                <source src="./media/hero-video.mp4" type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__brand">
+            <img class="footer__logo" src="./boobs logo.png" alt="BOOBS logo" />
+            <div>
+              <div class="footer__name title__glow title__glow--meme">BOOBS</div>
+              <div class="tiny">© <span id="year"></span> BOOBS. All memes reserved.</div>
+            </div>
+          </div>
+          <div class="footer__links">
+            <a href="#about">About</a>
+            <a href="#tits">Gallery</a>
+            <a href="#how-to-buy">How to buy</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#video">Video</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="tits-lightbox"
+      class="tits-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Enlarged gallery image"
+      hidden
+    >
+      <button type="button" class="tits-lightbox__backdrop" aria-label="Close zoomed image"></button>
+      <div class="tits-lightbox__dialog">
+        <button type="button" class="tits-lightbox__close" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <img class="tits-lightbox__img" id="tits-lightbox-img" alt="" width="1200" height="1600" decoding="async" />
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
