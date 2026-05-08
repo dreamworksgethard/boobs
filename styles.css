@@ -56,9 +56,15 @@ body::before{
 
 img{max-width:100%; display:block}
 
-/* Scroll reveal (see initScrollReveal in script.js) */
+/* Scroll reveal (see initScrollReveal in script.js) — replays when scrolling up or down */
 [data-reveal]:not(.is-visible){
   opacity: 0;
+  transform: translateY(26px);
+}
+[data-reveal][data-reveal-from="above"]:not(.is-visible){
+  transform: translateY(-26px);
+}
+[data-reveal][data-reveal-from="below"]:not(.is-visible){
   transform: translateY(26px);
 }
 [data-reveal]{
@@ -386,6 +392,11 @@ a{color:inherit; text-decoration:none}
   .meme-strip__inner{animation: none}
   .sparkle{animation-duration: 0.01ms; animation-iteration-count: 1}
   [data-reveal]{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .steps--big li{
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
@@ -1341,7 +1352,7 @@ body.tits-lightbox-open{
     inset 0 0 0 1px rgba(255, 255, 255, 0.08),
     inset 0 1px 0 rgba(255, 226, 164, 0.12);
 }
-.video-shell__video{
+.video-shell__media{
   display: block;
   width: 100%;
   height: auto;
@@ -1403,6 +1414,12 @@ body.tits-lightbox-open{
     box-shadow 180ms ease,
     border-color 180ms ease;
   will-change: transform, opacity;
+}
+.steps--big li[data-reveal-from="above"]:not(.is-visible){
+  transform: translateY(-18px) scale(0.98);
+}
+.steps--big li[data-reveal-from="below"]:not(.is-visible){
+  transform: translateY(18px) scale(0.98);
 }
 .steps--big li.is-visible{
   opacity: 1;

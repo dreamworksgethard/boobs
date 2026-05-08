@@ -27,15 +27,17 @@ function raydiumSwapUrl(ca) {
 }
 
 function setRaydiumBuyLink() {
-  const a = document.getElementById("raydium-buy");
-  if (!a) return;
+  const links = document.querySelectorAll(".raydium-buy-link");
+  if (!links.length) return;
   const url = raydiumSwapUrl(getCA());
-  if (url) {
-    a.setAttribute("href", url);
-    a.removeAttribute("aria-disabled");
-  } else {
-    a.setAttribute("href", "#tokenomics");
-    a.setAttribute("aria-disabled", "true");
+  for (const a of links) {
+    if (url) {
+      a.setAttribute("href", url);
+      a.removeAttribute("aria-disabled");
+    } else {
+      a.setAttribute("href", "#tokenomics");
+      a.setAttribute("aria-disabled", "true");
+    }
   }
 }
 
@@ -122,6 +124,11 @@ function animateStepsOnView() {
   const items = Array.from(document.querySelectorAll(".steps--big > li"));
   if (!items.length) return;
 
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const li of items) li.classList.add("is-visible");
+    return;
+  }
+
   if (!("IntersectionObserver" in window)) {
     for (const li of items) li.classList.add("is-visible");
     return;
@@ -130,13 +137,24 @@ function animateStepsOnView() {
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
-        if (!e.isIntersecting) continue;
         const el = /** @type {HTMLElement} */ (e.target);
-        el.classList.add("is-visible");
-        io.unobserve(el);
+        if (e.isIntersecting) {
+          const h = window.innerHeight || 0;
+          const mid =
+            (e.boundingClientRect.top + e.boundingClientRect.bottom) / 2;
+          if (h > 0 && mid > h * 0.52) {
+            el.dataset.revealFrom = "below";
+          } else {
+            el.dataset.revealFrom = "above";
+          }
+          el.classList.add("is-visible");
+        } else {
+          el.classList.remove("is-visible");
+          delete el.dataset.revealFrom;
+        }
       }
     },
-    { threshold: 0.12 }
+    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
   );
 
   items.forEach((li, i) => {
@@ -174,12 +192,24 @@ function initScrollReveal() {
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        e.target.classList.add("is-visible");
-        io.unobserve(e.target);
+        const el = /** @type {HTMLElement} */ (e.target);
+        if (e.isIntersecting) {
+          const h = window.innerHeight || 0;
+          const mid =
+            (e.boundingClientRect.top + e.boundingClientRect.bottom) / 2;
+          if (h > 0 && mid > h * 0.52) {
+            el.dataset.revealFrom = "below";
+          } else {
+            el.dataset.revealFrom = "above";
+          }
+          el.classList.add("is-visible");
+        } else {
+          el.classList.remove("is-visible");
+          delete el.dataset.revealFrom;
+        }
       }
     },
-    { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
   );
 
   for (const el of nodes) io.observe(el);
